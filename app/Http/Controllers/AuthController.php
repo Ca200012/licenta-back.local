@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\LoginRequest;
+use App\Http\Requests\RegisterRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
-use Illuminate\Support\Facades\Validator;
+
+use PHPOpenSourceSaver\JWTAuth\Exceptions\TokenInvalidException;
+use PHPOpenSourceSaver\JWTAuth\Exceptions\TokenExpiredException;
+use PHPOpenSourceSaver\JWTAuth\Exceptions\JWTException;
 
 class AuthController extends Controller
 {
@@ -15,50 +19,16 @@ class AuthController extends Controller
         $this->middleware('auth:api', ['except' => ['login', 'register']]);
     }
 
-    public function login(Request $request)
+    public function login(LoginRequest $request)
     {
-        $inputs = $request->only('email', 'password');
+        $credentials = $request->validated();
 
-        $validator = Validator::make(
-            $inputs,
-            [
-                'email' => [
-                    'required',
-                    'string',
-                    'min:8',
-                    'max:60',
-                    'email',
-                    'exists:users,email'
-                ],
-                'password' => [
-                    'required',
-                    'string',
-                    'min:8',
-                    'max:30'
-                ]
-            ],
-            [
-                'email.required' => 'Adresa de email este obligatorie',
-                'email.string' => 'Adresa de email are un format invalid',
-                'email.min' => 'Adresa de email trebuie sa aiba minim 8 caractere',
-                'email.max' => 'Adresa de email trebuie sa aiba maxim 60 caractere',
-                'email.email' => 'Formatul adresei de email este invalid',
-                'email.exists' => 'Email sau parola gresita',
-
-                'password.required' => 'Parola este obligatorie',
-                'password.string' => 'Parola are un format invalid',
-                'password.min' => 'Parola trebuie sa aiba minim 8 caractere',
-                'password.max' => 'Parola trebuie sa aiba maxim 30 caractere'
-            ]
-        );
-
-        if ($validator->fails()) {
-            return response()->error($validator->errors()->first());
+        $token = Auth::attempt($credentials);
+        if (!$token) {
+            return response([
+                'message' => 'Email-ul sau parola este gresita.'
+            ], 422);
         }
-
-        $token = Auth::attempt($inputs);
-        if (!$token)
-            return response()->error('Email sau parola gresita');
 
         $user = Auth::user();
 
@@ -71,23 +41,27 @@ class AuthController extends Controller
         ]);
     }
 
-    public function register(Request $request)
+    public function register(RegisterRequest $request)
     {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6',
-        ]);
+        //luam datele din request in variabila $data
+        //return response()->error($request->all());
+        $data = $request->validated();
 
+        //cream un obiect de tip user care primeste datele din $data si va fi trimis in front
         $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
+            'email' => $data['email'],
+            'phone_number' => $data['phone_number'],
+            'date_of_birth' => isset($data['birth_date']) ? $data['birth_date'] : null,
+            'password' => Hash::make($data['password']),
         ]);
-
+        //cream un obiect token care va fi trimis in front
         $token = Auth::login($user);
-        return response()->json([
-            'status' => 'success',
+
+        //returnam vectorul response care contine user si token
+        //acesta va deveni "data" in front(in signup axiosClient.post)
+        return response()->success([
             'message' => 'User created successfully',
             'user' => $user,
             'authorisation' => [
@@ -99,22 +73,31 @@ class AuthController extends Controller
 
     public function logout()
     {
+        //sterge sesiunea
         Auth::logout();
-        return response()->json([
-            'status' => 'success',
-            'message' => 'Successfully logged out',
-        ]);
+        return response()->success(
+            'Ati fost deconectat cu success'
+        );
     }
 
     public function refresh()
     {
-        return response()->json([
-            'status' => 'success',
-            'user' => Auth::user(),
-            'authorisation' => [
-                'token' => Auth::refresh(),
-                'type' => 'bearer',
-            ]
-        ]);
+        try {
+            $new_token = Auth::refresh();
+            return response()->success([
+                'user' => Auth::user(),
+                'authorization' => [
+                    'token' => $new_token,
+                    'type' => 'bearer',
+                    'ttl' => Auth::factory()->getTTL() * 60,
+                ]
+            ]);
+        } catch (TokenInvalidException $e) {
+            return response()->error('Token is Invalid');
+        } catch (TokenExpiredException $e) {
+            return response()->error('Token is Expired');
+        } catch (JWTException $e) {
+            return response()->error('Token is not provided');
+        }
     }
 }

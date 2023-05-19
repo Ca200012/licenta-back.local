@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UsersController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,4 +20,8 @@ Route::controller(AuthController::class)->middleware(['xss.sanitize', 'cors'])->
     Route::post('register', 'register');
     Route::post('logout', 'logout');
     Route::post('refresh', 'refresh');
+});
+
+Route::controller(UsersController::class)->middleware(['xss.sanitize', 'cors'])->group(function () {
+    Route::get('user', 'getUserData');
 });
