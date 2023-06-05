@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ResourcesController;
 use App\Http\Controllers\UsersController;
 
 /*
@@ -24,4 +25,10 @@ Route::controller(AuthController::class)->middleware(['xss.sanitize', 'cors'])->
 
 Route::controller(UsersController::class)->middleware(['xss.sanitize', 'cors'])->group(function () {
     Route::get('user', 'getUserData');
+    Route::put('user', 'updateUserData');
+});
+
+Route::controller(ResourcesController::class)->middleware(['xss.sanitize', 'cors'])->group(function () {
+    Route::get('counties', 'getCounties');
+    Route::post('cities', 'getCitiesBySearch');
 });
