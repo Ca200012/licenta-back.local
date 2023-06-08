@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AddressController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ResourcesController;
@@ -31,4 +32,9 @@ Route::controller(UsersController::class)->middleware(['xss.sanitize', 'cors'])-
 Route::controller(ResourcesController::class)->middleware(['xss.sanitize', 'cors'])->group(function () {
     Route::get('counties', 'getCounties');
     Route::post('cities', 'getCitiesBySearch');
+});
+
+Route::controller(AddressController::class)->middleware(['xss.sanitize', 'cors'])->group(function () {
+    Route::post('address', 'postAddress');
+    Route::get('address', 'getAddresses');
 });

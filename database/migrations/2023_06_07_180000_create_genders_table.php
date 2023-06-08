@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('counties', function (Blueprint $table) {
-            $table->id('county_id');
-            $table->string('name', 60)->unique();
+        Schema::create('genders', function (Blueprint $table) {
+            $table->id("gender_id");
+            $table->string("name", 20);
+            $table->timestamps();
         });
     }
 
@@ -22,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        // Schema::dropIfExists('counties');
+        Schema::dropIfExists('genders');
     }
 };

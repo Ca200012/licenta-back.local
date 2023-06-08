@@ -27,7 +27,7 @@ class RegisterRequest extends FormRequest
             'last_name' => 'required|string|max:55',
             'email' => 'required|email|unique:users,email',
             'phone_number' => 'required|regex:/^[0-9]{10}$/|unique:users,phone_number',
-            'birth_date' => 'sometimes|required|date:Y-m-d',
+            'date_of_birth' => 'sometimes',
             'password' => [
                 'required',
                 'string',

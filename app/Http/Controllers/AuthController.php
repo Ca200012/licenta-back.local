@@ -53,7 +53,7 @@ class AuthController extends Controller
             'last_name' => $data['last_name'],
             'email' => $data['email'],
             'phone_number' => $data['phone_number'],
-            'date_of_birth' => isset($data['birth_date']) ? $data['birth_date'] : null,
+            'date_of_birth' => isset($data['date_of_birth']) ? $data['date_of_birth'] : null,
             'password' => Hash::make($data['password']),
         ]);
         //cream un obiect token care va fi trimis in front
