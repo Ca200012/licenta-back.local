@@ -26,7 +26,7 @@ class AuthController extends Controller
         $token = Auth::attempt($credentials);
         if (!$token) {
             return response([
-                'message' => 'Email-ul sau parola este gresita.'
+                'message' => 'Email or password is incorrect'
             ], 422);
         }
 

@@ -46,19 +46,19 @@ class AddressesRequest extends FormRequest
                 'min:1'
             ],
             "building" => [
-                'sometimes',
+                'nullable',
                 'string',
                 'min:1',
                 'max:10',
             ],
             "entrance" => [
-                'sometimes',
+                'nullable',
                 'string',
                 'min:1',
                 'max:10',
             ],
             "apartment" => [
-                'sometimes',
+                'nullable',
                 'integer',
                 'min:1'
             ],
@@ -69,5 +69,62 @@ class AddressesRequest extends FormRequest
                 'max:6',
             ],
         ];
+        // $rules = [
+        //     "county_id" => [
+        //         'required',
+        //         'integer',
+        //         'min:1',
+        //         'exists:counties,county_id'
+        //     ],
+        //     "city_id" => [
+        //         'required',
+        //         'integer',
+        //         'min:1',
+        //         'exists:cities,city_id'
+        //     ],
+        //     "street" => [
+        //         'required',
+        //         'string',
+        //         'min:2',
+        //         'max:60',
+        //     ],
+        //     "street_number" => [
+        //         'required',
+        //         'integer',
+        //         'min:1'
+        //     ],
+        //     "postal_code" => [
+        //         'required',
+        //         'string',
+        //         'min:6',
+        //         'max:6',
+        //     ],
+        // ];
+
+        // // Add conditional validation rules for building, entrance, and apartment fields
+        // if ($this->input('building') !== null) {
+        //     $rules['building'] = [
+        //         'string',
+        //         'min:1',
+        //         'max:10',
+        //     ];
+        // }
+
+        // if ($this->input('entrance') !== null) {
+        //     $rules['entrance'] = [
+        //         'string',
+        //         'min:1',
+        //         'max:10',
+        //     ];
+        // }
+
+        // if ($this->input('apartment') !== null) {
+        //     $rules['apartment'] = [
+        //         'integer',
+        //         'min:1'
+        //     ];
+        // }
+
+        // return $rules;
     }
 }

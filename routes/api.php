@@ -37,4 +37,5 @@ Route::controller(ResourcesController::class)->middleware(['xss.sanitize', 'cors
 Route::controller(AddressController::class)->middleware(['xss.sanitize', 'cors'])->group(function () {
     Route::post('address', 'postAddress');
     Route::get('address', 'getAddresses');
+    Route::get('address/{address_id}', 'getAddressData');
 });

@@ -31,8 +31,49 @@ class AddressController extends Controller
     {
         $id = Auth::id();
 
-        $addresses = Address::where('user_id', $id)->get();
+        $addresses = Address::where('user_id', $id)
+            ->select('address_id', 'street', 'street_number', 'building', 'entrance', 'apartment', 'postal_code')
+            ->get()
+            ->map(function ($address) {
+                $parsedAddress = $address->street . ', No. ' . $address->street_number;
+
+                if ($address->building) {
+                    $parsedAddress .= ', Bld. ' . $address->building;
+                }
+
+                if ($address->entrance) {
+                    $parsedAddress .= ', Ent. ' . $address->entrance;
+                }
+
+                if ($address->apartment) {
+                    $parsedAddress .= ', Ap. ' . $address->apartment;
+                }
+
+                $address->value = $parsedAddress;
+
+                return $address->only('address_id', 'value');
+            });
 
         return response()->success($addresses);
+    }
+
+    public function getAddressData($address_id)
+    {
+        $address = Address::select(
+            'addresses.address_id',
+            'addresses.apartment',
+            'addresses.building',
+            'addresses.entrance',
+            'addresses.postal_code',
+            'addresses.street',
+            'addresses.street_number',
+
+            'cities.name as city_name',
+            'counties.name as county_name'
+        )
+            ->join('cities', 'addresses.city_id', '=', 'cities.city_id')
+            ->join('counties', 'addresses.county_id', '=', 'counties.county_id')
+            ->findOrFail($address_id);
+        return response()->success($address);
     }
 }

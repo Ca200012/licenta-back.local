@@ -33,18 +33,18 @@ class LoginRequest extends FormRequest
         ];
     }
 
-    public function messages(): array
-    {
-        return [
-            'email.required' => 'Email-ul este obligatoriu.',
-            'email.email' => 'Email-ul este invalid.',
-            'email.exists' => 'Email-ul introdus nu a mai fost folosit la crearea unui cont.',
+    // public function messages(): array
+    // {
+    //     return [
+    //         'email.required' => 'Email-ul este obligatoriu.',
+    //         'email.email' => 'Email-ul este invalid.',
+    //         'email.exists' => 'Email-ul introdus nu a mai fost folosit la crearea unui cont.',
 
-            'password.required' => 'Parola este obligatorie',
-            'password.string' => 'Parola are un format invalid',
-            'password.confirmed' => 'Parola si confirmarea parolei sunt diferite.',
-            'password.min' => 'Parola trebuie sa aiba minim 8 caractere.',
-            'password.letters' => 'Parola trebuie sa contina litere.',
-        ];
-    }
+    //         'password.required' => 'Parola este obligatorie',
+    //         'password.string' => 'Parola are un format invalid',
+    //         'password.confirmed' => 'Parola si confirmarea parolei sunt diferite.',
+    //         'password.min' => 'Parola trebuie sa aiba minim 8 caractere.',
+    //         'password.letters' => 'Parola trebuie sa contina litere.',
+    //     ];
+    // }
 }
