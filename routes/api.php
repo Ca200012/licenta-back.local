@@ -1,10 +1,12 @@
 <?php
 
 use App\Http\Controllers\AddressController;
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ResourcesController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\StructureProviderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,4 +40,14 @@ Route::controller(AddressController::class)->middleware(['xss.sanitize', 'cors']
     Route::post('address', 'postAddress');
     Route::get('address', 'getAddresses');
     Route::get('address/{address_id}', 'getAddressData');
+});
+
+Route::controller(StructureProviderController::class)->middleware(['xss.sanitize', 'cors'])->group(function () {
+    Route::get('category/{gender_id}', 'getCategories');
+    Route::get('subcategory/{category_id}', 'getSubCategories');
+    Route::get('articletype/{subcategory_id}', 'getArticleTypes');
+});
+
+Route::controller(ArticleController::class)->middleware(['xss.sanitize', 'cors'])->group(function () {
+    Route::get('article/{gender?}/{category?}/{subCategory?}/{articleType?}', 'getArticles');
 });
