@@ -49,5 +49,9 @@ Route::controller(StructureProviderController::class)->middleware(['xss.sanitize
 });
 
 Route::controller(ArticleController::class)->middleware(['xss.sanitize', 'cors'])->group(function () {
-    Route::get('article/{gender?}/{category?}/{subCategory?}/{articleType?}', 'getArticles');
+    Route::get('article/{gender?}/{category?}/{subcategory?}/{articletype?}/{sort?}', 'getArticles');
+    Route::get('colours', 'getColours');
+    Route::get('brands', 'getBrands');
+    Route::get('seasons', 'getSeasons');
+    Route::get('usages', 'getUsages');
 });
