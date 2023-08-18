@@ -1,247 +1,26 @@
-[2023-08-16 19:20:14] local.INFO: Sort value:   
-[2023-08-16 19:20:14] local.INFO: select * from `articles` where `gender_id` = ?  
-[2023-08-16 19:20:15] local.INFO: Sort value:   
-[2023-08-16 19:20:15] local.INFO: select * from `articles` where `gender_id` = ?  
-[2023-08-16 19:20:36] local.INFO: Sort value:   
-[2023-08-16 19:20:37] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:20:37] local.INFO: Sort value:   
-[2023-08-16 19:20:37] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:20:59] local.INFO: Sort value:   
-[2023-08-16 19:20:59] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:21:13] local.INFO: Sort value:   
-[2023-08-16 19:21:13] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:21:23] local.INFO: Sort value:   
-[2023-08-16 19:21:23] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:21:23] local.INFO: Sort value:   
-[2023-08-16 19:21:23] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:21:25] local.INFO: Sort value:   
-[2023-08-16 19:21:25] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:24:50] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:24:50] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:24:54] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:24:54] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:24:56] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:25:22] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ? order by `price` asc  
-[2023-08-16 19:25:23] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ? order by `price` asc  
-[2023-08-16 19:25:33] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ? order by `price` asc  
-[2023-08-16 19:26:01] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ? order by `price` asc  
-[2023-08-16 19:26:33] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:26:33] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:26:36] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:26:40] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:26:51] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:26:51] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:26:53] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:27:07] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ? order by `price` asc  
-[2023-08-16 19:27:07] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ? order by `price` asc  
-[2023-08-16 19:27:13] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ? order by `price` asc  
-[2023-08-16 19:28:39] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:28:39] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:28:42] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:29:23] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:29:30] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:29:31] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:29:34] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:33:58] local.INFO: select * from `articles` where `gender_id` = ?  
-[2023-08-16 19:33:59] local.INFO: select * from `articles` where `gender_id` = ?  
-[2023-08-16 19:34:07] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:34:07] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:34:11] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:34:14] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:34:37] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:34:44] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:34:44] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:34:52] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:34:59] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:35:37] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:35:42] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:35:42] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:35:43] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:36:05] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:36:11] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:36:11] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:36:12] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:36:38] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:36:41] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:36:42] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:37:26] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:37:28] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:37:29] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:37:29] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:37:30] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:37:48] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:40:20] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:40:23] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ? order by `price` asc  
-[2023-08-16 19:40:23] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ? order by `price` asc  
-[2023-08-16 19:40:37] local.INFO: select * from `articles` where `gender_id` = ?  
-[2023-08-16 19:40:37] local.INFO: select * from `articles` where `gender_id` = ?  
-[2023-08-16 19:40:45] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:40:51] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:42:38] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:42:43] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:42:43] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:42:45] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:42:48] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:43:10] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:43:15] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:43:15] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:43:18] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:43:53] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ? order by `price` asc  
-[2023-08-16 19:43:57] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:43:57] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:44:00] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ? order by `price` asc  
-[2023-08-16 19:44:03] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ? order by `price` desc  
-[2023-08-16 19:45:12] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ? order by `price` desc  
-[2023-08-16 19:45:12] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ? order by `price` desc  
-[2023-08-16 19:45:16] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:45:17] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:45:34] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:45:38] local.INFO: select * from `articles` where `gender_id` = ?  
-[2023-08-16 19:45:38] local.INFO: select * from `articles` where `gender_id` = ?  
-[2023-08-16 19:45:43] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:45:43] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:45:44] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:45:47] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:46:10] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:46:14] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:46:14] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:46:15] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:46:23] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:46:27] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:46:31] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:46:31] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:46:33] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ? order by `price` asc  
-[2023-08-16 19:46:35] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ? order by `price` desc  
-[2023-08-16 19:47:08] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ? order by `price` desc  
-[2023-08-16 19:47:54] local.INFO: select * from `articles` where `gender_id` = ?  
-[2023-08-16 19:47:54] local.INFO: select * from `articles` where `gender_id` = ?  
-[2023-08-16 19:47:59] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:47:59] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:48:01] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:48:04] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:48:48] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:48:48] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:48:49] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ? order by `price` asc  
-[2023-08-16 19:48:51] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ? order by `price` desc  
-[2023-08-16 19:49:15] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ? order by `price` desc  
-[2023-08-16 19:49:22] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ? order by `price` asc  
-[2023-08-16 19:50:04] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:50:07] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ? order by `price` asc  
-[2023-08-16 19:50:13] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ? order by `price` desc  
-[2023-08-16 19:50:25] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:50:25] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ?  
-[2023-08-16 19:55:58] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ? and `articletype_id` = ? order by `price` asc  
-[2023-08-16 20:13:47] local.ERROR: Undefined variable $subcategoryr {"userId":4,"exception":"[object] (ErrorException(code: 0): Undefined variable $subcategoryr at D:\\Licenta\\licenta-back.local\\app\\Http\\Controllers\\ArticleController.php:23)
+[2023-08-17 19:20:55] local.INFO:   
+[2023-08-17 19:20:58] local.INFO:   
+[2023-08-17 19:20:58] local.INFO:   
+[2023-08-17 19:21:02] local.INFO: Baggit  
+[2023-08-17 19:21:17] local.INFO:   
+[2023-08-17 19:21:21] local.INFO:   
+[2023-08-17 19:21:21] local.INFO:   
+[2023-08-17 19:21:27] local.INFO:   
+[2023-08-17 19:21:50] local.INFO:   
+[2023-08-17 19:21:50] local.INFO:   
+[2023-08-17 19:21:55] local.INFO: United Colors of Benetton  
+[2023-08-17 19:29:58] local.INFO:   
+[2023-08-17 19:29:58] local.INFO:   
+[2023-08-17 19:30:02] local.INFO: United Colors of Benetton  
+[2023-08-17 19:31:27] local.INFO:   
+[2023-08-17 19:31:27] local.INFO:   
+[2023-08-17 19:39:28] local.ERROR: preg_match(): Empty regular expression {"exception":"[object] (ErrorException(code: 0): preg_match(): Empty regular expression at D:\\Licenta\\licenta-back.local\\app\\Http\\Controllers\\ArticleController.php:36)
 [stacktrace]
-#0 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(254): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Undefined varia...', 'D:\\\\Licenta\\\\lice...', 23)
-#1 D:\\Licenta\\licenta-back.local\\app\\Http\\Controllers\\ArticleController.php(23): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Undefined varia...', 'D:\\\\Licenta\\\\lice...', 23)
-#2 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\ArticleController->getArticles(Object(Illuminate\\Http\\Request), 'Women', 'Accessories', 'Bags', NULL, NULL)
-#3 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('getArticles', Array)
-#4 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ArticleController), 'getArticles')
-#5 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
-#6 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Routing\\Route->run()
-#7 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
-#8 D:\\Licenta\\licenta-back.local\\app\\Http\\Middleware\\Cors.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#9 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\Cors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#10 D:\\Licenta\\licenta-back.local\\app\\Http\\Middleware\\XssSanitize.php(36): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#11 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\XssSanitize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#12 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#13 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#14 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(152): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#15 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(118): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
-#16 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(80): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
-#17 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
-#18 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#19 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
-#20 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
-#21 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
-#22 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
-#23 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
-#24 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
-#25 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#26 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#27 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#28 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#29 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#30 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#31 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#32 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#33 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#34 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#35 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#36 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#37 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#38 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#39 D:\\Licenta\\licenta-back.local\\vendor\\itsgoingd\\clockwork\\Clockwork\\Support\\Laravel\\ClockworkMiddleware.php(24): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#40 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Clockwork\\Support\\Laravel\\ClockworkMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#41 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#42 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
-#43 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
-#44 D:\\Licenta\\licenta-back.local\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
-#45 {main}
-"} 
-[2023-08-16 20:13:47] local.ERROR: Undefined variable $subcategoryr {"userId":4,"exception":"[object] (ErrorException(code: 0): Undefined variable $subcategoryr at D:\\Licenta\\licenta-back.local\\app\\Http\\Controllers\\ArticleController.php:23)
-[stacktrace]
-#0 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(254): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Undefined varia...', 'D:\\\\Licenta\\\\lice...', 23)
-#1 D:\\Licenta\\licenta-back.local\\app\\Http\\Controllers\\ArticleController.php(23): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Undefined varia...', 'D:\\\\Licenta\\\\lice...', 23)
-#2 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\ArticleController->getArticles(Object(Illuminate\\Http\\Request), 'Women', 'Accessories', 'Bags', NULL, NULL)
-#3 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('getArticles', Array)
-#4 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ArticleController), 'getArticles')
-#5 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
-#6 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Routing\\Route->run()
-#7 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
-#8 D:\\Licenta\\licenta-back.local\\app\\Http\\Middleware\\Cors.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#9 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\Cors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#10 D:\\Licenta\\licenta-back.local\\app\\Http\\Middleware\\XssSanitize.php(36): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#11 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\XssSanitize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#12 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#13 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#14 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(152): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#15 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(118): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
-#16 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(80): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
-#17 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
-#18 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#19 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
-#20 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
-#21 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
-#22 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
-#23 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
-#24 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
-#25 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#26 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#27 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#28 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#29 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#30 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#31 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#32 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#33 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#34 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#35 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#36 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#37 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#38 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#39 D:\\Licenta\\licenta-back.local\\vendor\\itsgoingd\\clockwork\\Clockwork\\Support\\Laravel\\ClockworkMiddleware.php(24): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#40 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Clockwork\\Support\\Laravel\\ClockworkMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#41 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#42 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
-#43 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
-#44 D:\\Licenta\\licenta-back.local\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
-#45 {main}
-"} 
-[2023-08-16 20:14:37] local.INFO: select `id`, `article_id`, `size_0`, `size_1`, `size_2`, `size_3`, `size_4`, `price`, `discounted_price`, `article_number`, `display_name`, `brand_name`, `colour`, `season`, `usage`, `pattern`, `first_image`, `second_image`, `description` from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ?  
-[2023-08-16 20:14:37] local.INFO: select `id`, `article_id`, `size_0`, `size_1`, `size_2`, `size_3`, `size_4`, `price`, `discounted_price`, `article_number`, `display_name`, `brand_name`, `colour`, `season`, `usage`, `pattern`, `first_image`, `second_image`, `description` from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ?  
-[2023-08-16 20:16:44] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ?  
-[2023-08-16 20:16:44] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ?  
-[2023-08-16 20:17:25] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ?  
-[2023-08-16 20:17:25] local.INFO: select * from `articles` where `gender_id` = ? and `category_id` = ? and `subcategory_id` = ?  
-[2023-08-16 20:48:17] local.ERROR: Class "App\Http\Controllers\Request" does not exist {"userId":4,"exception":"[object] (ReflectionException(code: -1): Class \"App\\Http\\Controllers\\Request\" does not exist at D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResolvesRouteDependencies.php:81)
-[stacktrace]
-#0 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResolvesRouteDependencies.php(81): ReflectionClass->__construct('App\\\\Http\\\\Contro...')
-#1 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResolvesRouteDependencies.php(50): Illuminate\\Routing\\ControllerDispatcher->transformDependency(Object(ReflectionParameter), Array, Object(stdClass))
-#2 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResolvesRouteDependencies.php(29): Illuminate\\Routing\\ControllerDispatcher->resolveMethodDependencies(Array, Object(ReflectionMethod))
-#3 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(59): Illuminate\\Routing\\ControllerDispatcher->resolveClassMethodDependencies(Array, Object(App\\Http\\Controllers\\ArticleController), 'getArticles')
-#4 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(40): Illuminate\\Routing\\ControllerDispatcher->resolveParameters(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ArticleController), 'getArticles')
+#0 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(254): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'preg_match(): E...', 'D:\\\\Licenta\\\\lice...', 36)
+#1 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'preg_match(): E...', 'D:\\\\Licenta\\\\lice...', 36)
+#2 D:\\Licenta\\licenta-back.local\\app\\Http\\Controllers\\ArticleController.php(36): preg_match('', 'brand0')
+#3 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\ArticleController->getArticles(Object(Illuminate\\Http\\Request), 'Women', 'Accessories', 'Bags', 'Handbags')
+#4 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('getArticles', Array)
 #5 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ArticleController), 'getArticles')
 #6 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
 #7 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Routing\\Route->run()
@@ -285,13 +64,13 @@
 #45 D:\\Licenta\\licenta-back.local\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #46 {main}
 "} 
-[2023-08-16 20:48:18] local.ERROR: Class "App\Http\Controllers\Request" does not exist {"userId":4,"exception":"[object] (ReflectionException(code: -1): Class \"App\\Http\\Controllers\\Request\" does not exist at D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResolvesRouteDependencies.php:81)
+[2023-08-17 19:42:15] local.ERROR: preg_match(): Compilation failed: PCRE2 does not support \F, \L, \l, \N{name}, \U, or \u at offset 2 {"exception":"[object] (ErrorException(code: 0): preg_match(): Compilation failed: PCRE2 does not support \\F, \\L, \\l, \\N{name}, \\U, or \\u at offset 2 at D:\\Licenta\\licenta-back.local\\app\\Http\\Controllers\\ArticleController.php:37)
 [stacktrace]
-#0 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResolvesRouteDependencies.php(81): ReflectionClass->__construct('App\\\\Http\\\\Contro...')
-#1 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResolvesRouteDependencies.php(50): Illuminate\\Routing\\ControllerDispatcher->transformDependency(Object(ReflectionParameter), Array, Object(stdClass))
-#2 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResolvesRouteDependencies.php(29): Illuminate\\Routing\\ControllerDispatcher->resolveMethodDependencies(Array, Object(ReflectionMethod))
-#3 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(59): Illuminate\\Routing\\ControllerDispatcher->resolveClassMethodDependencies(Array, Object(App\\Http\\Controllers\\ArticleController), 'getArticles')
-#4 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(40): Illuminate\\Routing\\ControllerDispatcher->resolveParameters(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ArticleController), 'getArticles')
+#0 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(254): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'preg_match(): C...', 'D:\\\\Licenta\\\\lice...', 37)
+#1 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'preg_match(): C...', 'D:\\\\Licenta\\\\lice...', 37)
+#2 D:\\Licenta\\licenta-back.local\\app\\Http\\Controllers\\ArticleController.php(37): preg_match('/\\\\usage([0-9]|[...', 'brand0')
+#3 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\ArticleController->getArticles(Object(Illuminate\\Http\\Request), 'Women', 'Accessories', 'Bags', 'Handbags')
+#4 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('getArticles', Array)
 #5 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ArticleController), 'getArticles')
 #6 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
 #7 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Routing\\Route->run()
@@ -335,195 +114,53 @@
 #45 D:\\Licenta\\licenta-back.local\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #46 {main}
 "} 
-[2023-08-16 20:48:33] local.ERROR: Undefined property: Illuminate\Support\Facades\Request::$sort {"userId":4,"exception":"[object] (ErrorException(code: 0): Undefined property: Illuminate\\Support\\Facades\\Request::$sort at D:\\Licenta\\licenta-back.local\\app\\Http\\Controllers\\ArticleController.php:20)
+[2023-08-17 19:42:47] local.ERROR: preg_match(): Compilation failed: PCRE2 does not support \F, \L, \l, \N{name}, \U, or \u at offset 2 {"exception":"[object] (ErrorException(code: 0): preg_match(): Compilation failed: PCRE2 does not support \\F, \\L, \\l, \\N{name}, \\U, or \\u at offset 2 at D:\\Licenta\\licenta-back.local\\app\\Http\\Controllers\\ArticleController.php:37)
 [stacktrace]
-#0 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(254): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Undefined prope...', 'D:\\\\Licenta\\\\lice...', 20)
-#1 D:\\Licenta\\licenta-back.local\\app\\Http\\Controllers\\ArticleController.php(20): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Undefined prope...', 'D:\\\\Licenta\\\\lice...', 20)
-#2 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\ArticleController->getArticles(Object(Illuminate\\Support\\Facades\\Request), 'Women', 'Accessories', 'Belts', 'Belts')
-#3 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('getArticles', Array)
-#4 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ArticleController), 'getArticles')
-#5 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
-#6 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Routing\\Route->run()
-#7 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
-#8 D:\\Licenta\\licenta-back.local\\app\\Http\\Middleware\\Cors.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#9 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\Cors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#10 D:\\Licenta\\licenta-back.local\\app\\Http\\Middleware\\XssSanitize.php(36): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#11 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\XssSanitize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#12 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#13 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#14 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(152): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#15 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(118): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
-#16 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(80): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
-#17 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
-#18 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#19 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
-#20 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
-#21 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
-#22 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
-#23 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
-#24 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
-#25 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#26 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#27 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#28 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#29 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#30 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#31 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#32 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#33 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#34 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#35 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#36 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#37 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#38 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#39 D:\\Licenta\\licenta-back.local\\vendor\\itsgoingd\\clockwork\\Clockwork\\Support\\Laravel\\ClockworkMiddleware.php(24): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#40 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Clockwork\\Support\\Laravel\\ClockworkMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#41 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#42 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
-#43 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
-#44 D:\\Licenta\\licenta-back.local\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
-#45 {main}
-"} 
-[2023-08-16 20:48:33] local.ERROR: Undefined property: Illuminate\Support\Facades\Request::$sort {"userId":4,"exception":"[object] (ErrorException(code: 0): Undefined property: Illuminate\\Support\\Facades\\Request::$sort at D:\\Licenta\\licenta-back.local\\app\\Http\\Controllers\\ArticleController.php:20)
-[stacktrace]
-#0 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(254): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Undefined prope...', 'D:\\\\Licenta\\\\lice...', 20)
-#1 D:\\Licenta\\licenta-back.local\\app\\Http\\Controllers\\ArticleController.php(20): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'Undefined prope...', 'D:\\\\Licenta\\\\lice...', 20)
-#2 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\ArticleController->getArticles(Object(Illuminate\\Support\\Facades\\Request), 'Women', 'Accessories', 'Belts', 'Belts')
-#3 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('getArticles', Array)
-#4 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ArticleController), 'getArticles')
-#5 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
-#6 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Routing\\Route->run()
-#7 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
-#8 D:\\Licenta\\licenta-back.local\\app\\Http\\Middleware\\Cors.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#9 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\Cors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#10 D:\\Licenta\\licenta-back.local\\app\\Http\\Middleware\\XssSanitize.php(36): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#11 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\XssSanitize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#12 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#13 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#14 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(152): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#15 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(118): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
-#16 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(80): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
-#17 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
-#18 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#19 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
-#20 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
-#21 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
-#22 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
-#23 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
-#24 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
-#25 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#26 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#27 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#28 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#29 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#30 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#31 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#32 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#33 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#34 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#35 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#36 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#37 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#38 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#39 D:\\Licenta\\licenta-back.local\\vendor\\itsgoingd\\clockwork\\Clockwork\\Support\\Laravel\\ClockworkMiddleware.php(24): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#40 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Clockwork\\Support\\Laravel\\ClockworkMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#41 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#42 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
-#43 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
-#44 D:\\Licenta\\licenta-back.local\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
-#45 {main}
-"} 
-[2023-08-16 21:09:40] local.ERROR: Method App\Http\Controllers\ArticleController::getColours does not exist. {"userId":4,"exception":"[object] (BadMethodCallException(code: 0): Method App\\Http\\Controllers\\ArticleController::getColours does not exist. at D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php:68)
-[stacktrace]
-#0 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): Illuminate\\Routing\\Controller->__call('getColours', Array)
-#1 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('getColours', Array)
-#2 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ArticleController), 'getColours')
-#3 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
-#4 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Routing\\Route->run()
-#5 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
-#6 D:\\Licenta\\licenta-back.local\\app\\Http\\Middleware\\Cors.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#7 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\Cors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#8 D:\\Licenta\\licenta-back.local\\app\\Http\\Middleware\\XssSanitize.php(36): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#9 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\XssSanitize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#10 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#11 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#12 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(152): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#13 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(118): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
-#14 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(80): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
-#15 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
-#16 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#17 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
-#18 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
-#19 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
-#20 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
-#21 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
-#22 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
-#23 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#24 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#25 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#0 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(254): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'preg_match(): C...', 'D:\\\\Licenta\\\\lice...', 37)
+#1 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->Illuminate\\Foundation\\Bootstrap\\{closure}(2, 'preg_match(): C...', 'D:\\\\Licenta\\\\lice...', 37)
+#2 D:\\Licenta\\licenta-back.local\\app\\Http\\Controllers\\ArticleController.php(37): preg_match('/\\\\usage([0-9]|[...', 'brand0')
+#3 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\ArticleController->getArticles(Object(Illuminate\\Http\\Request), 'Women', 'Accessories', 'Bags', 'Handbags')
+#4 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('getArticles', Array)
+#5 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ArticleController), 'getArticles')
+#6 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#7 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Routing\\Route->run()
+#8 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#9 D:\\Licenta\\licenta-back.local\\app\\Http\\Middleware\\Cors.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#10 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\Cors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#11 D:\\Licenta\\licenta-back.local\\app\\Http\\Middleware\\XssSanitize.php(36): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\XssSanitize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#13 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#15 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(152): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(118): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#17 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(80): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#18 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#19 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#21 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#22 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#23 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#24 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#25 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
 #26 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#27 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#28 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#29 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#30 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#31 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#32 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#33 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#34 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#35 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#36 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#37 D:\\Licenta\\licenta-back.local\\vendor\\itsgoingd\\clockwork\\Clockwork\\Support\\Laravel\\ClockworkMiddleware.php(24): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#38 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Clockwork\\Support\\Laravel\\ClockworkMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#39 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#40 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
-#41 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
-#42 D:\\Licenta\\licenta-back.local\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
-#43 {main}
-"} 
-[2023-08-16 21:09:40] local.ERROR: Method App\Http\Controllers\ArticleController::getColours does not exist. {"userId":4,"exception":"[object] (BadMethodCallException(code: 0): Method App\\Http\\Controllers\\ArticleController::getColours does not exist. at D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php:68)
-[stacktrace]
-#0 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): Illuminate\\Routing\\Controller->__call('getColours', Array)
-#1 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('getColours', Array)
-#2 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\ArticleController), 'getColours')
-#3 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
-#4 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Routing\\Route->run()
-#5 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
-#6 D:\\Licenta\\licenta-back.local\\app\\Http\\Middleware\\Cors.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#7 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\Cors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#8 D:\\Licenta\\licenta-back.local\\app\\Http\\Middleware\\XssSanitize.php(36): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#9 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): App\\Http\\Middleware\\XssSanitize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#10 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#11 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#12 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(152): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#13 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(118): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
-#14 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(80): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
-#15 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
-#16 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#17 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(797): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
-#18 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(776): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
-#19 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(740): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
-#20 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(729): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
-#21 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
-#22 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
-#23 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#24 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#25 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#26 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#27 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#28 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#29 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#30 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#31 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#32 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#33 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#34 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#35 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#36 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#37 D:\\Licenta\\licenta-back.local\\vendor\\itsgoingd\\clockwork\\Clockwork\\Support\\Laravel\\ClockworkMiddleware.php(24): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#38 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Clockwork\\Support\\Laravel\\ClockworkMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
-#39 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
-#40 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
-#41 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
-#42 D:\\Licenta\\licenta-back.local\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
-#43 {main}
+#27 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 D:\\Licenta\\licenta-back.local\\vendor\\itsgoingd\\clockwork\\Clockwork\\Support\\Laravel\\ClockworkMiddleware.php(24): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Clockwork\\Support\\Laravel\\ClockworkMiddleware->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#44 D:\\Licenta\\licenta-back.local\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#45 D:\\Licenta\\licenta-back.local\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#46 {main}
 "} 
