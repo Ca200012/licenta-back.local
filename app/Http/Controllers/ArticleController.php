@@ -25,6 +25,7 @@ class ArticleController extends Controller
         $brands = [];
         $usages = [];
         $seasons = [];
+        $patterns = [];
 
         foreach ($filterInputs as $key => $value) {
             if (preg_match('/colour\d{1,3}/', $key)) {
@@ -38,6 +39,9 @@ class ArticleController extends Controller
                 continue;
             } else if (preg_match('/season\d{1,3}/', $key)) {
                 $seasons[] = $filterInputs[$key];
+                continue;
+            } else if (preg_match('/pattern\d{1,3}/', $key)) {
+                $patterns[] = $filterInputs[$key];
                 continue;
             }
         }
@@ -100,6 +104,10 @@ class ArticleController extends Controller
             $articles_query->whereIn('season', $seasons);
         }
 
+        if (count($patterns)) {
+            $articles_query->whereIn('pattern', $patterns);
+        }
+
         if ($sort) {
             if ($sort === 'asc') {
                 $articles_query->orderBy('price', 'asc');
@@ -116,6 +124,7 @@ class ArticleController extends Controller
         $unique_brand_names = $filters_query->distinct()->pluck('brand_name')->all();
         $unique_usages = $filters_query->distinct()->pluck('usage')->all();
         $unique_seasons = $filters_query->distinct()->pluck('season')->all();
+        $unique_patterns = $filters_query->whereNot('pattern', "none")->distinct()->pluck('pattern')->all();
 
         // Create an array to return both articles and unique values
         $result = [
@@ -140,6 +149,11 @@ class ArticleController extends Controller
                     'key' => 'seasons',
                     'title' => 'Season',
                     'values' => $unique_seasons
+                ],
+                [
+                    'key' => 'patterns',
+                    'title' => 'Pattern',
+                    'values' => $unique_patterns
                 ]
             ],
         ];

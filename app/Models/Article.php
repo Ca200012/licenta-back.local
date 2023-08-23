@@ -20,11 +20,6 @@ class Article extends Model
 
     protected $fillable = [
         'article_id', // cel real
-        'size_0',
-        'size_1',
-        'size_2',
-        'size_3',
-        'size_4',
         'price',
         'discounted_price',
         'article_number',
@@ -36,12 +31,16 @@ class Article extends Model
         'pattern',
         'first_image',
         'second_image',
-        'third_image',
         'description',
         'gender_id',
         'category_id',
         'subcategory_id',
         'articletype_id',
+        'size_S_availability',
+        'size_M_availability',
+        'size_L_availability',
+        'size_XL_availability',
+        'size_XXL_availability',
     ];
 
     public function gender()
@@ -62,5 +61,10 @@ class Article extends Model
     public function articleType()
     {
         return $this->belongsTo(ArticleType::class, 'articletype_id');
+    }
+
+    public function cartItems()
+    {
+        return $this->belongsTo(CartItem::class, 'id', 'article_id');
     }
 }

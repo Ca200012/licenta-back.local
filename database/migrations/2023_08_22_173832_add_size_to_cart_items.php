@@ -11,10 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('genders', function (Blueprint $table) {
-            $table->id("gender_id");
-            $table->string("name", 20);
-            $table->timestamps();
+        Schema::table('cart_items', function (Blueprint $table) {
+            $table->string("size", 3)->after('article_id');
         });
     }
 
@@ -23,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //Schema::dropIfExists('genders');
+        Schema::table('cart_items', function (Blueprint $table) {
+            $table->dropColumn("size");
+        });
     }
 };

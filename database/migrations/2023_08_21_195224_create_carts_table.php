@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('genders', function (Blueprint $table) {
-            $table->id("gender_id");
-            $table->string("name", 20);
+        Schema::create('carts', function (Blueprint $table) {
+            $table->id("cart_id");
+            $table->foreignId('user_id')->constrained(
+                table: 'users',
+                column: 'user_id',
+                indexName: 'carts_user_id'
+            );
             $table->timestamps();
         });
     }
@@ -23,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //Schema::dropIfExists('genders');
+        Schema::dropIfExists('carts');
     }
 };

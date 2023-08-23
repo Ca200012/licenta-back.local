@@ -4,6 +4,7 @@ use App\Http\Controllers\AddressController;
 use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CartsController;
 use App\Http\Controllers\ResourcesController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\StructureProviderController;
@@ -51,4 +52,10 @@ Route::controller(StructureProviderController::class)->middleware(['xss.sanitize
 Route::controller(ArticleController::class)->middleware(['xss.sanitize', 'cors'])->group(function () {
     Route::get('article/{gender?}/{category?}/{subcategory?}/{articletype?}/{sort?}', 'getArticles');
     Route::get('articledata/{article_id}', 'getArticleData');
+});
+
+Route::controller(CartsController::class)->middleware(['xss.sanitize', 'cors'])->group(function () {
+    Route::post('add', 'addToCart');
+    Route::post('remove', 'removeFromCart');
+    Route::get('cartarticles', 'getArticlesFromCart');
 });
