@@ -104,7 +104,7 @@ class CartsController extends Controller
         $cartItems = $cart->items;
 
         if ($cartItems->isEmpty()) {
-            return response()->error('Your cart is empty!');
+            return response()->success([]);
         }
 
         $total_order_price = 0;
@@ -135,7 +135,7 @@ class CartsController extends Controller
 
         return response()->success([
             'articles' => $responseArticles,
-            'total_order_price' => $total_order_price
+            'total_order_price' => $total_order_price,
         ]);
     }
 }

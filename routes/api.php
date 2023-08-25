@@ -58,4 +58,5 @@ Route::controller(CartsController::class)->middleware(['xss.sanitize', 'cors'])-
     Route::post('add', 'addToCart');
     Route::post('remove', 'removeFromCart');
     Route::get('cartarticles', 'getArticlesFromCart');
+    Route::get('begin-checkout', 'beginCheckout');
 });
