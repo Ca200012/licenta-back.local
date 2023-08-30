@@ -18,11 +18,11 @@ class CartItem extends Model
 
     public function cart()
     {
-        return $this->belongsTo(Cart::class);
+        return $this->belongsTo(Cart::class, 'cart_id', 'cart_id');
     }
 
     public function article()
     {
-        return $this->belongsTo(Article::class);
+        return $this->belongsTo(Article::class, 'article_id', 'id');
     }
 }

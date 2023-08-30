@@ -14,11 +14,6 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->string('order_id', 10);
-            $table->foreignId('user_id')->constrained(
-                table: 'users',
-                column: 'user_id',
-                indexName: 'orders_user_id'
-            );
             $table->foreignId('cart_id')->constrained(
                 table: 'carts',
                 column: 'cart_id',

@@ -5,6 +5,7 @@ use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartsController;
+use App\Http\Controllers\OrdersController;
 use App\Http\Controllers\ResourcesController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\StructureProviderController;
@@ -59,4 +60,10 @@ Route::controller(CartsController::class)->middleware(['xss.sanitize', 'cors'])-
     Route::post('remove', 'removeFromCart');
     Route::get('cartarticles', 'getArticlesFromCart');
     Route::get('begin-checkout', 'beginCheckout');
+});
+
+Route::controller(OrdersController::class)->middleware(['xss.sanitize', 'cors'])->group(function () {
+    Route::post('addorder', 'addOrder');
+    Route::get('orders', 'getOrders');
+    Route::get('orderdata/{order_id}', 'getOrderDetails');
 });

@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 
 class CartsController extends Controller
 {
+
     public function addToCart(Request $request)
     {
         $user = Auth::user();
@@ -20,15 +21,21 @@ class CartsController extends Controller
         $article = Article::where('article_id', $id)->first();
 
         if (!$article) {
-            // Handle the case where the article does not exist.
             return response()->error('Invalid article ID provided!');
         }
 
         $item_id = $article->id;
-        $cart = $user->cart ?: Cart::create(['user_id' => $user->user_id]);
+
+        // Search for an active cart (is_active = 1)
+        $cart = $user->cart?->where('is_active', 1)->first();
+
+        // If no cart exists at all, create one
+        if (!$cart) {
+            $cart = Cart::create(['user_id' => $user->user_id, 'is_active' => 1, 'price' => 0]);
+        }
+
         $cartItem = $cart->items()->where('article_id', $item_id)->where('size', $size)->first();
 
-        // Determine the column name dynamically based on the size
         $columnName = 'size_' . strtoupper($size) . '_availability';
 
         if (!isset($article->{$columnName})) {
@@ -38,7 +45,6 @@ class CartsController extends Controller
         $availableSizeQuantity = $article->{$columnName};
 
         if ($cartItem) {
-            // If the item's new quantity exceeds availability, return an error
             if ($cartItem->quantity + 1 > $availableSizeQuantity) {
                 return response()->error('You can\'t add any more items of this type!');
             }
@@ -46,11 +52,19 @@ class CartsController extends Controller
             $cartItem->update([
                 'quantity' => ++$cartItem->quantity
             ]);
+
+            $cart->update([
+                'price' => $cart->price + $article->price
+            ]);
         } else {
             CartItem::create([
                 'cart_id' => $cart->cart_id,
                 'article_id' => $item_id,
-                'size' => $size
+                'size' => $size,
+            ]);
+
+            $cart->update([
+                'price' => $cart->price + $article->price
             ]);
         }
 
@@ -76,6 +90,8 @@ class CartsController extends Controller
             return response()->error('This item is not in your cart!');
         }
 
+        $article = Article::find($item_id);
+
         if ($delete_all) {
             $cartItem->delete();
             return response()->success('Successfully removed item from cart!');
@@ -85,20 +101,29 @@ class CartsController extends Controller
             $cartItem->update([
                 'quantity' => --$cartItem->quantity
             ]);
+
+            $cart->update([
+                'price' => $cart->price - $article->price
+            ]);
         } else {
             $cartItem->delete();
+
+            $cart->update([
+                'price' => $cart->price - $article->price
+            ]);
         }
 
         return response()->success('Successfully removed item from cart!');
     }
 
+
     public function getArticlesFromCart()
     {
         $user = Auth::user();
-        $cart = $user->cart;
+        $cart = $user->cart->where('is_active', 1)->first();
 
         if (!$cart) {
-            return response()->error("You don't have a cart yet!");
+            $cart = Cart::create(['user_id' => $user->user_id, 'is_active' => 1, 'price' => 0]);
         }
 
         $cartItems = $cart->items;
@@ -107,14 +132,10 @@ class CartsController extends Controller
             return response()->success([]);
         }
 
-        $total_order_price = 0;
-
-        $responseArticles = $cartItems->map(function ($cartItem) use (&$total_order_price) {
+        $responseArticles = $cartItems->map(function ($cartItem) use ($cart) {
             $article = $cartItem->article;
 
             $selectedSizeAvailability = 'size_' . strtoupper($cartItem->size) . '_availability';
-            $total_price = $article->price * $cartItem->quantity;
-            $total_order_price += $total_price;
             return [
                 'id' => $article->id,
                 'article_id' => $article->article_id,
@@ -123,19 +144,17 @@ class CartsController extends Controller
                 'brand_name' => $article->brand_name,
                 'colour' => $article->colour,
                 'default_image' => $article->default_image,
-                'price' => $article->price,
-                'total_price' => $total_price,
+                'price' => $article->price * $cartItem->quantity,
                 'selected_size' => $cartItem->size,
                 'selected_size_availability' => $article->$selectedSizeAvailability,
                 'quantity' => $cartItem->quantity,
-                'cart_id' => $cartItem->cart_id
+                'cart_id' => $cartItem->cart_id,
             ];
         })->all();
 
-
         return response()->success([
             'articles' => $responseArticles,
-            'total_order_price' => $total_order_price,
+            'total_cart_price' => $cart->price, // Use the price from the cart
         ]);
     }
 }
