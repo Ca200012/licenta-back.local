@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use DateTimeInterface;
 
 class Order extends Model
 {
@@ -16,6 +17,8 @@ class Order extends Model
         'status'
     ];
 
+
+
     public function cart()
     {
         return $this->belongsTo(Cart::class, 'cart_id', 'cart_id');
@@ -24,5 +27,10 @@ class Order extends Model
     public function address()
     {
         return $this->belongsTo(Address::class, 'address_id', 'address_id');
+    }
+
+    public function getFormattedCreatedAtAttribute()
+    {
+        return $this->created_at->format('d-m-Y H:i');
     }
 }

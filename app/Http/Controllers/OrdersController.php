@@ -96,7 +96,7 @@ class OrdersController extends Controller
             return [
                 'order_id' => $order->order_id,
                 'status' => $order->status,
-                'order_date' => $order->created_at,
+                'order_date' => $order->formatted_created_at,
                 'price' => $order->cart->price,
                 'article_images' => $order->cart->items->map(function ($cartItem) {
                     return $cartItem->article->default_image;
@@ -127,7 +127,7 @@ class OrdersController extends Controller
         $formattedOrderDetails = [
             'order_id' => $order->order_id,
             'status' => ucfirst($order->status),
-            'order_date' => $order->created_at,
+            'order_date' => $order->formatted_created_at,
             'price' => $order->cart->price,
             'articles' => $order->cart->items->map(function ($item) {
                 return [

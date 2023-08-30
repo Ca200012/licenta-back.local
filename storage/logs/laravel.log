@@ -5857,3 +5857,31 @@ User-Agent:      Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleW
 #44 D:\\Licenta\\licenta-back.local\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #45 {main}
 "} 
+[2023-08-31 00:44:24] local.ERROR: Could not check compatibility between App\Models\Order::serializeDate(App\Models\DateTimeInterface $date) and Illuminate\Database\Eloquent\Model::serializeDate(DateTimeInterface $date), because class App\Models\DateTimeInterface is not available {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Could not check compatibility between App\\Models\\Order::serializeDate(App\\Models\\DateTimeInterface $date) and Illuminate\\Database\\Eloquent\\Model::serializeDate(DateTimeInterface $date), because class App\\Models\\DateTimeInterface is not available at D:\\Licenta\\licenta-back.local\\app\\Models\\Order.php:19)
+[stacktrace]
+#0 {main}
+"} 
+[2023-08-31 00:44:37] local.ERROR: Could not check compatibility between App\Models\Order::serializeDate(App\Models\DateTimeInterface $date) and Illuminate\Database\Eloquent\Model::serializeDate(DateTimeInterface $date), because class App\Models\DateTimeInterface is not available {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Could not check compatibility between App\\Models\\Order::serializeDate(App\\Models\\DateTimeInterface $date) and Illuminate\\Database\\Eloquent\\Model::serializeDate(DateTimeInterface $date), because class App\\Models\\DateTimeInterface is not available at D:\\Licenta\\licenta-back.local\\app\\Models\\Order.php:19)
+[stacktrace]
+#0 {main}
+"} 
+[2023-08-31 00:44:53] local.ERROR: Could not check compatibility between App\Models\Order::serializeDate(App\Models\DateTimeInterface $date) and Illuminate\Database\Eloquent\Model::serializeDate(DateTimeInterface $date), because class App\Models\DateTimeInterface is not available {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Could not check compatibility between App\\Models\\Order::serializeDate(App\\Models\\DateTimeInterface $date) and Illuminate\\Database\\Eloquent\\Model::serializeDate(DateTimeInterface $date), because class App\\Models\\DateTimeInterface is not available at D:\\Licenta\\licenta-back.local\\app\\Models\\Order.php:25)
+[stacktrace]
+#0 {main}
+"} 
+[2023-08-31 00:45:37] local.ERROR: Could not check compatibility between App\Models\Order::serializeDate(App\Models\DateTimeInterface $date) and Illuminate\Database\Eloquent\Model::serializeDate(DateTimeInterface $date), because class App\Models\DateTimeInterface is not available {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Could not check compatibility between App\\Models\\Order::serializeDate(App\\Models\\DateTimeInterface $date) and Illuminate\\Database\\Eloquent\\Model::serializeDate(DateTimeInterface $date), because class App\\Models\\DateTimeInterface is not available at D:\\Licenta\\licenta-back.local\\app\\Models\\Order.php:25)
+[stacktrace]
+#0 {main}
+"} 
+[2023-08-31 00:45:54] local.ERROR: Could not check compatibility between App\Models\Order::serializeDate(App\Models\DateTimeInterface $date): string and Illuminate\Database\Eloquent\Model::serializeDate(DateTimeInterface $date), because class App\Models\DateTimeInterface is not available {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Could not check compatibility between App\\Models\\Order::serializeDate(App\\Models\\DateTimeInterface $date): string and Illuminate\\Database\\Eloquent\\Model::serializeDate(DateTimeInterface $date), because class App\\Models\\DateTimeInterface is not available at D:\\Licenta\\licenta-back.local\\app\\Models\\Order.php:22)
+[stacktrace]
+#0 {main}
+"} 
+[2023-08-31 00:46:02] local.ERROR: Could not check compatibility between App\Models\Order::serializeDate(App\Models\DateTimeInterface $date): string and Illuminate\Database\Eloquent\Model::serializeDate(DateTimeInterface $date), because class App\Models\DateTimeInterface is not available {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Could not check compatibility between App\\Models\\Order::serializeDate(App\\Models\\DateTimeInterface $date): string and Illuminate\\Database\\Eloquent\\Model::serializeDate(DateTimeInterface $date), because class App\\Models\\DateTimeInterface is not available at D:\\Licenta\\licenta-back.local\\app\\Models\\Order.php:34)
+[stacktrace]
+#0 {main}
+"} 
+[2023-08-31 00:46:37] local.ERROR: Could not check compatibility between App\Models\Order::serializeDate(App\Models\DateTimeInterface $date): string and Illuminate\Database\Eloquent\Model::serializeDate(DateTimeInterface $date), because class App\Models\DateTimeInterface is not available {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Could not check compatibility between App\\Models\\Order::serializeDate(App\\Models\\DateTimeInterface $date): string and Illuminate\\Database\\Eloquent\\Model::serializeDate(DateTimeInterface $date), because class App\\Models\\DateTimeInterface is not available at D:\\Licenta\\licenta-back.local\\app\\Models\\Order.php:34)
+[stacktrace]
+#0 {main}
+"} 
