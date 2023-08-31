@@ -12,111 +12,86 @@ use Illuminate\Http\Request;
 class CartsController extends Controller
 {
 
+    // Verificare articol -> daca exista
     public function addToCart(Request $request)
     {
+        $sizeColumnName = 'size_' . strtoupper($request->size) . '_availability';
         $user = Auth::user();
-        $id = $request->input('id');
-        $size = $request->input('size');
 
-        $article = Article::where('article_id', $id)->first();
+        $article = Article::where('article_id', $request->id)->where($sizeColumnName, '>', 0)->first();
 
         if (!$article) {
-            return response()->error('Invalid article ID provided!');
+            return response()->error('Article does not exist or desired size is not available!');
         }
 
-        $item_id = $article->id;
+        $activeCart = $user->activeCart ?? Cart::create([
+            'user_id' => $user->user_id
+        ]);
 
-        // Search for an active cart (is_active = 1)
-        $cart = $user->cart->where('is_active', 1)->first();
+        $existingCartItem = CartItem::where([
+            ['article_id', '=', $article->id],
+            ['cart_id', '=', $activeCart->cart_id],
+            ['size', '=', $request->size],
+            ['quantity', '>', 0]
+        ])->first();
 
-        // If no cart exists at all, create one
-        if (!$cart) {
-            $cart = Cart::create(['user_id' => $user->user_id, 'is_active' => 1, 'price' => 0]);
-        }
-
-        $cartItem = $cart->items()->where('article_id', $item_id)->where('size', $size)->first();
-
-        $columnName = 'size_' . strtoupper($size) . '_availability';
-
-        if (!isset($article->{$columnName})) {
-            return response()->error('Invalid size provided!');
-        }
-
-        $availableSizeQuantity = $article->{$columnName};
-
-        if ($cartItem) {
-            if ($cartItem->quantity + 1 > $availableSizeQuantity) {
-                return response()->error('You can\'t add any more items of this type!');
-            }
-
-            $cartItem->update([
-                'quantity' => ++$cartItem->quantity
-            ]);
-
-            $cart->update([
-                'price' => $cart->price + $article->price
+        if (!$existingCartItem) {
+            CartItem::create([
+                'article_id' => $article->id,
+                'cart_id' => $activeCart->cart_id,
+                'size' => $request->size
             ]);
         } else {
-            CartItem::create([
-                'cart_id' => $cart->cart_id,
-                'article_id' => $item_id,
-                'size' => $size,
-            ]);
+            if ($existingCartItem->quantity >= $article->$sizeColumnName) {
+                return response()->error('Cannot add more of this item: maximum size quantity reached.');
+            }
 
-            $cart->update([
-                'price' => $cart->price + $article->price
-            ]);
+            $existingCartItem->update(['quantity', ++$existingCartItem->quantity]);
         }
 
-        return response()->success('Successfully added item to cart!');
+        return response()->success('Successfully added item to cart');
     }
 
     public function removeFromCart(Request $request)
     {
+        $sizeColumnName = 'size_' . strtoupper($request->size) . '_availability';
         $user = Auth::user();
 
-        $item_id = $request->input('id');
+        $article = Article::where('article_id', $request->id)->where($sizeColumnName, '>', 0)->first();
 
-        $delete_all = $request->input('delete_all');
-
-        $cart = $user->cart;
-
-        if (!$cart) {
-            return response()->error("You don't have a cart yet!");
+        if (!$article) {
+            return response()->error('Article does not exist or desired size is not available!');
         }
 
-        $cartItem = $cart->items()->where('article_id', $item_id)->first();
+        $activeCart = $user->activeCart;
 
-        if (!$cartItem) {
-            return response()->error('This item is not in your cart!');
+        if (!$activeCart) {
+            return response()->error('No active cart found!');
         }
 
-        $article = Article::find($item_id);
+        $existingCartItem = CartItem::where([
+            ['article_id', '=', $article->id],
+            ['cart_id', '=', $activeCart->cart_id],
+            ['size', '=', $request->size],
+            ['quantity', '>', 0]
+        ])->first();
 
-        if ($delete_all) {
-            $cartItem->delete();
-            return response()->success('Successfully removed item from cart!');
+        if (!$existingCartItem) {
+            return response()->error('Item does not exist in cart!');
         }
 
-        if ($cartItem->quantity && $cartItem->quantity > 1) {
-            $cartItem->update([
-                'quantity' => --$cartItem->quantity
-            ]);
-
-            $cart->update([
-                'price' => $cart->price - $article->price
-            ]);
+        if ($request->delete_all) {
+            $existingCartItem->delete();
         } else {
-            $cartItem->delete();
-
-            $cart->update([
-                'price' => $cart->price - $article->price
-            ]);
+            if ($existingCartItem->quantity <= 1) {
+                $existingCartItem->delete();
+            } else {
+                $existingCartItem->update(['quantity' => --$existingCartItem->quantity]);
+            }
         }
 
-        return response()->success('Successfully removed item from cart!');
+        return response()->success('Successfully removed item from cart');
     }
-
 
     public function getArticlesFromCart()
     {
