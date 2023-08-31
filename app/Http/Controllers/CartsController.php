@@ -27,7 +27,7 @@ class CartsController extends Controller
         $item_id = $article->id;
 
         // Search for an active cart (is_active = 1)
-        $cart = $user->cart?->where('is_active', 1)->first();
+        $cart = $user->cart->where('is_active', 1)->first();
 
         // If no cart exists at all, create one
         if (!$cart) {
@@ -76,6 +76,7 @@ class CartsController extends Controller
         $user = Auth::user();
 
         $item_id = $request->input('id');
+
         $delete_all = $request->input('delete_all');
 
         $cart = $user->cart;
