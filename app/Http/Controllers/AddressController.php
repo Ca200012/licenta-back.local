@@ -49,6 +49,8 @@ class AddressController extends Controller
                     $parsedAddress .= ', Ap. ' . $address->apartment;
                 }
 
+                $parsedAddress .= ', ' . $address->postal_code;
+
                 $address->value = $parsedAddress;
 
                 return $address->only('address_id', 'value');

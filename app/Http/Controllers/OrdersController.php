@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\OrderCancelation;
 use App\Models\Order;
 use Illuminate\Http\Request;
 
@@ -9,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 use App\Mail\OrderConfirmation;
+use App\Models\Address;
 use App\Models\Cart;
 use Illuminate\Support\Facades\Mail;
 
@@ -124,11 +126,34 @@ class OrdersController extends Controller
             return response()->json(['message' => 'Order not found'], 404);
         }
 
+        $address = Address::where('address_id', $order->address_id)->first();
+
+        $parsedAddress = $address->street . ', No. ' . $address->street_number;
+
+        if ($address->building) {
+            $parsedAddress .= ', Bld. ' . $address->building;
+        }
+
+        if ($address->entrance) {
+            $parsedAddress .= ', Ent. ' . $address->entrance;
+        }
+
+        if ($address->apartment) {
+            $parsedAddress .= ', Ap. ' . $address->apartment;
+        }
+
+        $parsedAddress .= ', ' . $address->postal_code;
+
         $formattedOrderDetails = [
             'order_id' => $order->order_id,
             'status' => ucfirst($order->status),
             'order_date' => $order->formatted_created_at,
             'price' => $order->cart->price,
+            'user_first_name' => $user->first_name,
+            'user_last_name' => $user->last_name,
+            'user_email' => $user->email,
+            'user_phone_number' => $user->phone_number,
+            'delivery_address' => $parsedAddress,
             'articles' => $order->cart->items->map(function ($item) {
                 return [
                     'size' => $item->size,
@@ -145,5 +170,21 @@ class OrdersController extends Controller
         ];
 
         return response()->json($formattedOrderDetails);
+    }
+
+    public function cancelOrder($order_id)
+    {
+        $user = Auth::user();
+
+        $order = Order::where('order_id', $order_id)->first();
+
+        $order->update([
+            'status' => 'Cancelled'
+        ]);
+
+        Mail::to($user->email)->send(new OrderCancelation($order));
+
+        if ($order->status == "Cancelled") return response()->success("Your order has been successfully cancelled!");
+        else return response()->error("There was an error, please try again later!");
     }
 }

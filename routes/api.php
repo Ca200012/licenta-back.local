@@ -66,4 +66,5 @@ Route::controller(OrdersController::class)->middleware(['xss.sanitize', 'cors'])
     Route::post('addorder', 'addOrder');
     Route::get('orders', 'getOrders');
     Route::get('orderdata/{order_id}', 'getOrderDetails');
+    Route::get('cancel/{order_id}', 'cancelOrder');
 });
