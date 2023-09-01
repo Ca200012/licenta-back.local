@@ -67,4 +67,9 @@ class Article extends Model
     {
         return $this->belongsTo(CartItem::class, 'id', 'article_id');
     }
+
+    public function viewedArticle()
+    {
+        return $this->belongsTo(ViewedArticle::class, 'id', 'article_id');
+    }
 }

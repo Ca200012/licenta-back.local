@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartsController;
 use App\Http\Controllers\OrdersController;
+use App\Http\Controllers\RecommendationsController;
 use App\Http\Controllers\ResourcesController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\StructureProviderController;
@@ -53,6 +54,8 @@ Route::controller(StructureProviderController::class)->middleware(['xss.sanitize
 Route::controller(ArticleController::class)->middleware(['xss.sanitize', 'cors'])->group(function () {
     Route::get('article/{gender?}/{category?}/{subcategory?}/{articletype?}/{sort?}', 'getArticles');
     Route::get('articledata/{article_id}', 'getArticleData');
+    Route::post('viewedarticle', 'addViewedArticle');
+    Route::get('getviewedarticles', 'getViewedArticles');
 });
 
 Route::controller(CartsController::class)->middleware(['xss.sanitize', 'cors'])->group(function () {
@@ -67,4 +70,8 @@ Route::controller(OrdersController::class)->middleware(['xss.sanitize', 'cors'])
     Route::get('orders', 'getOrders');
     Route::get('orderdata/{order_id}', 'getOrderDetails');
     Route::get('cancel/{order_id}', 'cancelOrder');
+});
+
+Route::controller(RecommendationsController::class)->middleware(['xss.sanitize', 'cors'])->group(function () {
+    Route::get('/recommendations', 'getRecommendations');
 });

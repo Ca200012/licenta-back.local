@@ -41,12 +41,16 @@ class CartsController extends Controller
                 'cart_id' => $activeCart->cart_id,
                 'size' => $request->size
             ]);
+            $activeCart->update(['price' => $activeCart->price + $article->price]);
         } else {
             if ($existingCartItem->quantity >= $article->$sizeColumnName) {
                 return response()->error('Cannot add more of this item: maximum size quantity reached.');
             }
 
-            $existingCartItem->update(['quantity', ++$existingCartItem->quantity]);
+            // Increment the item quantity
+            $existingCartItem->update(['quantity' => ++$existingCartItem->quantity]);
+            // Add the price of the additional item to the cart
+            $activeCart->update(['price' => $activeCart->price + $article->price]);
         }
 
         return response()->success('Successfully added item to cart');
@@ -81,8 +85,10 @@ class CartsController extends Controller
         }
 
         if ($request->delete_all) {
+            $activeCart->update(['price' => $activeCart->price - ($existingCartItem->quantity * $article->price)]);
             $existingCartItem->delete();
         } else {
+            $activeCart->update(['price' => $activeCart->price - $article->price]);
             if ($existingCartItem->quantity <= 1) {
                 $existingCartItem->delete();
             } else {

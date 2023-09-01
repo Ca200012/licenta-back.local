@@ -10,6 +10,8 @@ use App\Models\Structure\Gender;
 use App\Models\Structure\Category;
 use App\Models\Structure\SubCategory;
 use App\Models\Structure\ArticleType;
+use App\Models\ViewedArticle;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 
 use function PHPSTORM_META\map;
@@ -116,9 +118,11 @@ class ArticleController extends Controller
             }
         }
 
+        $total_articles = $articles_query->count('id');
+
         $filters_query = clone $articles_query;
 
-        $articles = $articles_query->get();
+        $articles = $articles_query->paginate(16);
 
         $unique_colours = $filters_query->distinct()->pluck('colour')->all();
         $unique_brand_names = $filters_query->distinct()->pluck('brand_name')->all();
@@ -156,6 +160,8 @@ class ArticleController extends Controller
                     'values' => $unique_patterns
                 ]
             ],
+            'current_page' => $request->page ?? 1,
+            'last_page' => ceil($total_articles / 16)
         ];
 
         return response()->success($result);
@@ -165,5 +171,61 @@ class ArticleController extends Controller
     {
         $article_data = Article::query()->where('article_id', $article_id)->get();
         return response()->success($article_data);
+    }
+
+    public function addViewedArticle(Request $request)
+    {
+        $user_id = Auth::id();
+        $article = Article::where('article_id', $request->article_id)->first();
+        $article_id = $article->id;
+
+        $viewedArticle = ViewedArticle::where('user_id', $user_id)
+            ->where('article_id', $article_id)
+            ->first();
+
+        // Check if the article already exists in viewed_articles
+        if ($viewedArticle) {
+            if ($viewedArticle->times_viewed < 20) {
+                $viewedArticle->increment('times_viewed');
+            }
+        } else {
+            $count = ViewedArticle::where('user_id', $user_id)->count();
+
+            if ($count >= 10) {
+                // Delete the oldest record
+                ViewedArticle::where('user_id', $user_id)
+                    ->orderBy('created_at', 'asc')
+                    ->limit(1)
+                    ->delete();
+            }
+
+            // Insert new record
+            ViewedArticle::create([
+                'user_id' => $user_id,
+                'article_id' => $article_id,
+            ]);
+        }
+
+        return response()->success(['message' => 'Article viewed']);
+    }
+
+    public function getViewedArticles()
+    {
+        $user_id = Auth::id();
+
+        // Eager-load the viewedArticle along with the Article model
+        $result = Article::with(['viewedArticle' => function ($query) use ($user_id) {
+            $query->where('user_id', $user_id)->orderBy('created_at', 'desc');
+        }])
+            ->whereHas('viewedArticle', function ($query) use ($user_id) {
+                $query->where('user_id', $user_id);
+            })
+            ->get()
+            ->sortByDesc(function ($article, $key) {
+                return $article->viewedArticle->created_at;
+            })
+            ->values(); // Reset the keys on the sorted collection
+
+        return response()->success($result);
     }
 }
