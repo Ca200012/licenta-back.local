@@ -26,7 +26,7 @@ class OrdersController extends Controller
             $address_id = $request->input('address_id');
             $order_id = $request->input('order_id');
 
-            $cart = $user->cart->where('is_active', 1)->first();
+            $cart = $user->activeCart;
 
             if (!$cart) {
                 return response()->error("You don't have a cart yet!");
@@ -35,12 +35,15 @@ class OrdersController extends Controller
             $cartItems = $cart->items;
             $cart_id = $cart->cart_id;
 
+            $total_order_price = $cart->price < 300 ? $cart->price + 15.99 : $cart->price;
+
             // Create a new Order
             $order = Order::create([
                 'order_id' => $order_id,
                 'cart_id' => $cart_id,
                 'address_id' => $address_id,
-                'status' => 'Pending'
+                'status' => 'Pending',
+                'total_order_price' => $total_order_price,
             ]);
 
             // Update isActive field in Cart to 0
@@ -91,7 +94,8 @@ class OrdersController extends Controller
             }
         ])
             ->whereIn('cart_id', $cartIds)
-            ->select(['order_id', 'cart_id', 'status', 'created_at']) // Only select the fields you need from Order
+            ->select(['order_id', 'cart_id', 'status', 'total_order_price', 'created_at']) // Only select the fields you need from Order
+            ->orderBy('created_at', 'desc')
             ->get();
 
         $formattedOrders = $orders->map(function ($order) {
@@ -99,7 +103,7 @@ class OrdersController extends Controller
                 'order_id' => $order->order_id,
                 'status' => $order->status,
                 'order_date' => $order->formatted_created_at,
-                'price' => $order->cart->price,
+                'order_price' => $order->total_order_price,
                 'article_images' => $order->cart->items->map(function ($cartItem) {
                     return $cartItem->article->default_image;
                 })->toArray()
@@ -148,7 +152,7 @@ class OrdersController extends Controller
             'order_id' => $order->order_id,
             'status' => ucfirst($order->status),
             'order_date' => $order->formatted_created_at,
-            'price' => $order->cart->price,
+            'order_price' => $order->total_order_price,
             'user_first_name' => $user->first_name,
             'user_last_name' => $user->last_name,
             'user_email' => $user->email,

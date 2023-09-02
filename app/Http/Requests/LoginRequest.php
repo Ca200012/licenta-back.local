@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Validation\Rules\Password;
 
 class LoginRequest extends FormRequest
@@ -33,18 +35,11 @@ class LoginRequest extends FormRequest
         ];
     }
 
-    // public function messages(): array
-    // {
-    //     return [
-    //         'email.required' => 'Email-ul este obligatoriu.',
-    //         'email.email' => 'Email-ul este invalid.',
-    //         'email.exists' => 'Email-ul introdus nu a mai fost folosit la crearea unui cont.',
-
-    //         'password.required' => 'Parola este obligatorie',
-    //         'password.string' => 'Parola are un format invalid',
-    //         'password.confirmed' => 'Parola si confirmarea parolei sunt diferite.',
-    //         'password.min' => 'Parola trebuie sa aiba minim 8 caractere.',
-    //         'password.letters' => 'Parola trebuie sa contina litere.',
-    //     ];
-    // }
+    protected function failedValidation(Validator $validator)
+    {
+        $errors = $validator->errors()->all();
+        throw new HttpResponseException(response()->json([
+            'message' => $errors[0]
+        ], 422));
+    }
 }

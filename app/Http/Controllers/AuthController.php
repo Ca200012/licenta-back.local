@@ -14,6 +14,7 @@ use PHPOpenSourceSaver\JWTAuth\Exceptions\JWTException;
 
 class AuthController extends Controller
 {
+    // bypass the middleware for login and register methods - the user is not logged-in yet
     public function __construct()
     {
         $this->middleware('auth:api', ['except' => ['login', 'register']]);

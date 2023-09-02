@@ -27,6 +27,7 @@ return new class extends Migration
             $table->unsignedInteger('apartment')->nullable();
             $table->string('postal_code', 6);
             $table->timestamps();
+            $table->timestamp('deleted_at')->nullable();
         });
     }
 

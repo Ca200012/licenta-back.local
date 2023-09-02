@@ -22,56 +22,60 @@ use App\Http\Controllers\StructureProviderController;
 |
 */
 
-Route::controller(AuthController::class)->middleware(['xss.sanitize', 'cors'])->group(function () {
-    Route::post('login', 'login');
-    Route::post('register', 'register');
-    Route::post('logout', 'logout');
-    Route::post('refresh', 'refresh');
-});
+Route::middleware(['xss.sanitize', 'cors'])->group(function () {
+    Route::controller(AuthController::class)->group(function () {
+        Route::post('login', 'login');
+        Route::post('register', 'register');
+        Route::post('logout', 'logout');
+        Route::post('refresh', 'refresh');
+    });
 
-Route::controller(UsersController::class)->middleware(['xss.sanitize', 'cors'])->group(function () {
-    Route::get('user', 'getUserData');
-    Route::put('user', 'updateUserData');
-});
+    Route::controller(UsersController::class)->group(function () {
+        Route::get('user', 'getUserData');
+        Route::put('user', 'updateUserData');
+    });
 
-Route::controller(ResourcesController::class)->middleware(['xss.sanitize', 'cors'])->group(function () {
-    Route::get('counties', 'getCounties');
-    Route::post('cities', 'getCitiesBySearch');
-});
+    Route::controller(ResourcesController::class)->group(function () {
+        Route::get('counties', 'getCounties');
+        Route::post('cities', 'getCitiesBySearch');
+    });
 
-Route::controller(AddressController::class)->middleware(['xss.sanitize', 'cors'])->group(function () {
-    Route::post('address', 'postAddress');
-    Route::get('address', 'getAddresses');
-    Route::get('address/{address_id}', 'getAddressData');
-});
+    Route::controller(AddressController::class)->group(function () {
+        Route::post('address', 'postAddress');
+        Route::get('address', 'getAddresses');
+        Route::delete('address/{address_id}', 'deleteAddress');
+    });
 
-Route::controller(StructureProviderController::class)->middleware(['xss.sanitize', 'cors'])->group(function () {
-    Route::get('category/{gender_id}', 'getCategories');
-    Route::get('subcategory/{category_id}', 'getSubCategories');
-    Route::get('articletype/{subcategory_id}', 'getArticleTypes');
-});
+    Route::controller(StructureProviderController::class)->group(function () {
+        Route::get('category/{gender_id}', 'getCategories');
+        Route::get('subcategory/{category_id}', 'getSubCategories');
+        Route::get('articletype/{subcategory_id}', 'getArticleTypes');
+    });
 
-Route::controller(ArticleController::class)->middleware(['xss.sanitize', 'cors'])->group(function () {
-    Route::get('article/{gender?}/{category?}/{subcategory?}/{articletype?}/{sort?}', 'getArticles');
-    Route::get('articledata/{article_id}', 'getArticleData');
-    Route::post('viewedarticle', 'addViewedArticle');
-    Route::get('getviewedarticles', 'getViewedArticles');
-});
+    Route::controller(ArticleController::class)->group(function () {
+        Route::get('article/{gender?}/{category?}/{subcategory?}/{articletype?}/{sort?}', 'getArticles');
+        Route::get('articledata/{article_id}', 'getArticleData');
+        Route::post('viewedarticle', 'addViewedArticle');
+        Route::get('getviewedarticles', 'getViewedArticles');
+        Route::post('can-purchase', 'checkIfCanPurchase');
+    });
 
-Route::controller(CartsController::class)->middleware(['xss.sanitize', 'cors'])->group(function () {
-    Route::post('add', 'addToCart');
-    Route::post('remove', 'removeFromCart');
-    Route::get('cartarticles', 'getArticlesFromCart');
-    Route::get('begin-checkout', 'beginCheckout');
-});
+    Route::controller(CartsController::class)->group(function () {
+        Route::post('add', 'addToCart');
+        Route::post('remove', 'removeFromCart');
+        Route::post('cartarticles', 'getArticlesFromCart');
+        Route::get('begin-checkout', 'beginCheckout');
+        Route::post('store-articles-from-ls', 'storeArticlesFromLs');
+    });
 
-Route::controller(OrdersController::class)->middleware(['xss.sanitize', 'cors'])->group(function () {
-    Route::post('addorder', 'addOrder');
-    Route::get('orders', 'getOrders');
-    Route::get('orderdata/{order_id}', 'getOrderDetails');
-    Route::get('cancel/{order_id}', 'cancelOrder');
-});
+    Route::controller(OrdersController::class)->group(function () {
+        Route::post('addorder', 'addOrder');
+        Route::get('orders', 'getOrders');
+        Route::get('orderdata/{order_id}', 'getOrderDetails');
+        Route::get('cancel/{order_id}', 'cancelOrder');
+    });
 
-Route::controller(RecommendationsController::class)->middleware(['xss.sanitize', 'cors'])->group(function () {
-    Route::get('/recommendations', 'getRecommendations');
+    Route::controller(RecommendationsController::class)->group(function () {
+        Route::get('/recommendations', 'getRecommendations');
+    });
 });

@@ -14,7 +14,8 @@ class Order extends Model
         'order_id',
         'cart_id',
         'address_id',
-        'status'
+        'status',
+        'total_order_price'
     ];
 
 

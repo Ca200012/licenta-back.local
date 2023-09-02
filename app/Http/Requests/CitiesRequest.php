@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Exceptions\HttpResponseException;
 
 class CitiesRequest extends FormRequest
 {
@@ -35,5 +37,13 @@ class CitiesRequest extends FormRequest
                 'regex:/^[\pL\s]+$/u'
             ]
         ];
+    }
+
+    protected function failedValidation(Validator $validator)
+    {
+        $errors = $validator->errors()->all();
+        throw new HttpResponseException(response()->json([
+            'message' => $errors[0]
+        ], 422));
     }
 }

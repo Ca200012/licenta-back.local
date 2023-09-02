@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Validation\Rules\Password;
 
 class RegisterRequest extends FormRequest
@@ -39,33 +41,11 @@ class RegisterRequest extends FormRequest
         ];
     }
 
-    // public function messages(): array
-    // {
-    //     return [
-    //         'first_name.required' => 'Prenumele este obligatoriu',
-    //         'first_name.string' => 'Prenumele are un format invalid.',
-    //         'first_name.max' => 'Prenumele trebuie sa aiba maxim 55 de caractere.',
-
-    //         'last_name.required' => 'Numele este obligatoriu',
-    //         'last_name.string' => 'Numele are un format invalid.',
-    //         'last_name.max' => 'Numele trebuie sa aiba maxim 55 de caractere.',
-
-    //         'email.required' => 'Email-ul este obligatoriu.',
-    //         'email.email' => 'Email-ul este invalid.',
-    //         'email.unique' => 'Email-ul introdus a fost deja folosit.',
-
-    //         'phone_number.required' => 'Numarul de telefon este obligatoriu.',
-    //         'phone_number.regex' => 'Numarul de telefon are un format invalid.',
-    //         'phone_number.unique' => 'Numarul de telefon introdus a fost deja folosit.',
-
-    //         'birth_date.required' => 'Data nasterii este obligatorie',
-    //         'birth_date.date' => 'Data nasterii are un format invalid',
-
-    //         'password.required' => 'Parola este obligatorie',
-    //         'password.string' => 'Parola are un format invalid',
-    //         'password.confirmed' => 'Parola si confirmarea parolei sunt diferite.',
-    //         'password.min' => 'Parola trebuie sa aiba minim 8 caractere.',
-    //         'password.letters' => 'Parola trebuie sa contina litere.',
-    //     ];
-    // }
+    protected function failedValidation(Validator $validator)
+    {
+        $errors = $validator->errors()->all();
+        throw new HttpResponseException(response()->json([
+            'message' => $errors[0]
+        ], 422));
+    }
 }

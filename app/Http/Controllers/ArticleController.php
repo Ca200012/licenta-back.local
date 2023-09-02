@@ -12,12 +12,25 @@ use App\Models\Structure\SubCategory;
 use App\Models\Structure\ArticleType;
 use App\Models\ViewedArticle;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Log;
-
-use function PHPSTORM_META\map;
 
 class ArticleController extends Controller
 {
+    public function checkIfCanPurchase(Request $request)
+    {
+        $sizeColumnName = 'size_' . strtoupper($request->size) . '_availability';
+
+        $article = Article::where([
+            ['article_id', $request->id],
+            [$sizeColumnName, '>', $request->quantity]
+        ])->first();
+
+        if (!$article) {
+            return response()->error(false);
+        } else {
+            return response()->success(true);
+        }
+    }
+
     public function getArticles(Request $request, $gender = null, $category = null, $subcategory = null, $articletype = null)
     {
         $filterInputs = $request->all();
@@ -177,7 +190,11 @@ class ArticleController extends Controller
     {
         $user_id = Auth::id();
         $article = Article::where('article_id', $request->article_id)->first();
+
         $article_id = $article->id;
+
+        if (!$user_id)
+            return response()->error('You must be logged-in to perform this action!');
 
         $viewedArticle = ViewedArticle::where('user_id', $user_id)
             ->where('article_id', $article_id)

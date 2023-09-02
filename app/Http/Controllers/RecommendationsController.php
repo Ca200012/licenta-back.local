@@ -19,6 +19,21 @@ class RecommendationsController extends Controller
         $viewedArticles = ViewedArticle::where('user_id', $user_id)->with('article')->orderBy('times_viewed', 'desc')->get();
         $viewedMetadata = $viewedArticles->pluck('article'); // Only get article data
 
+        if (!$user_id || $viewedArticles->isEmpty()) {
+            $viewedArticles = ViewedArticle::with([
+                'article' => function ($query) {
+                    $query->select('article_id', 'id', 'default_image', 'price', 'display_name', 'brand_name');
+                }
+            ])
+                ->orderBy('times_viewed', 'desc')
+                ->get()
+                ->map(function ($viewedArticle) {
+                    return $viewedArticle->article;
+                })
+                ->toArray();
+            return response()->success($viewedArticles);
+        }
+
         // Get ordered articles
         $orderedCarts = Order::where('status', '<>', 'Cancelled')
             ->whereHas('cart', function ($query) use ($user_id) {

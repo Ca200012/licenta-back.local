@@ -32,10 +32,15 @@ class AddressController extends Controller
         $id = Auth::id();
 
         $addresses = Address::where('user_id', $id)
-            ->select('address_id', 'street', 'street_number', 'building', 'entrance', 'apartment', 'postal_code')
+            ->select('address_id', 'street', 'street_number', 'building', 'entrance', 'apartment', 'postal_code', 'counties.name as county_name', 'cities.name as city_name')
+            ->leftJoin('counties', 'addresses.county_id', 'counties.county_id')
+            ->leftJoin('cities', 'addresses.city_id', 'cities.city_id')
+            ->whereNull('deleted_at')
             ->get()
             ->map(function ($address) {
-                $parsedAddress = $address->street . ', No. ' . $address->street_number;
+                $parsedAddress = $address->county_name . ', ' . $address->city_name . ', ';
+
+                $parsedAddress .= $address->street . ', No. ' . $address->street_number;
 
                 if ($address->building) {
                     $parsedAddress .= ', Bld. ' . $address->building;
@@ -54,28 +59,29 @@ class AddressController extends Controller
                 $address->value = $parsedAddress;
 
                 return $address->only('address_id', 'value');
-            });
+            })
+            ->toArray();
 
         return response()->success($addresses);
     }
 
-    public function getAddressData($address_id)
+    public function deleteAddress($address_id)
     {
-        $address = Address::select(
-            'addresses.address_id',
-            'addresses.apartment',
-            'addresses.building',
-            'addresses.entrance',
-            'addresses.postal_code',
-            'addresses.street',
-            'addresses.street_number',
+        $user = Auth::user();
 
-            'cities.name as city_name',
-            'counties.name as county_name'
-        )
-            ->join('cities', 'addresses.city_id', '=', 'cities.city_id')
-            ->join('counties', 'addresses.county_id', '=', 'counties.county_id')
-            ->findOrFail($address_id);
-        return response()->success($address);
+        $address = Address::where([
+            ['address_id', $address_id],
+            ['user_id', $user->user_id]
+        ])->first();
+
+        if (!$address) {
+            return response()->error('Could not delete address!');
+        }
+
+        $address->update([
+            'deleted_at' => date('Y-m-d H:i:s')
+        ]);
+
+        return response()->success('Address deleted!');
     }
 }
