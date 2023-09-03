@@ -17,7 +17,7 @@ class UsersController extends Controller
     public function __construct()
     {
         //nu poate intra in functii decat daca exista un token
-        $this->middleware('auth:api');
+        $this->middleware('auth:api', ['except' => ['sendMessageReceivedEmail']]);
     }
 
     public function getUserData()
