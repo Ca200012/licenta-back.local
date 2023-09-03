@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\UpdateRequest;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+
+use App\Models\User;
+
+use App\Mail\MessageReceived;
+
+use App\Http\Requests\UpdateRequest;
 
 class UsersController extends Controller
 {
@@ -31,11 +36,22 @@ class UsersController extends Controller
         // preia user-ul care are cheia primara egala cu $id
         $user = User::find($id);
         if (!$user) {
-            return response()->error("Am intampinat o eroare!");
+            return response()->error("An error has occured!");
         }
 
         $user->update($data);
 
         return response()->success($user);
+    }
+
+    public function sendMessageReceivedEmail(Request $request)
+    {
+        try {
+            Mail::to($request->email)->send(new MessageReceived());
+            return response()->success("Your email has been sent!");
+        } catch (\Exception $e) {
+            // Log the exception message
+            return response()->error("Failed to send the email");
+        }
     }
 }

@@ -10,7 +10,7 @@ use App\Http\Controllers\RecommendationsController;
 use App\Http\Controllers\ResourcesController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\StructureProviderController;
-
+use App\Http\Controllers\PasswordResetsController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -33,6 +33,13 @@ Route::middleware(['xss.sanitize', 'cors'])->group(function () {
     Route::controller(UsersController::class)->group(function () {
         Route::get('user', 'getUserData');
         Route::put('user', 'updateUserData');
+        Route::post('message', 'sendMessageReceivedEmail');
+    });
+
+    Route::controller(PasswordResetsController::class)->group(function () {
+        Route::post('check-email', 'checkEmailAndGenerateCode');
+        Route::post('check-code', 'checkResetCode');
+        Route::post('reset-password', 'resetPassword');
     });
 
     Route::controller(ResourcesController::class)->group(function () {

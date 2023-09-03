@@ -17,7 +17,7 @@ class RecommendationsController extends Controller
 
         // Get viewed articles
         $viewedArticles = ViewedArticle::where('user_id', $user_id)->with('article')->orderBy('times_viewed', 'desc')->get();
-        $viewedMetadata = $viewedArticles->pluck('article'); // Only get article data
+        $viewedMetadata = $viewedArticles->pluck('article');
 
         if (!$user_id || $viewedArticles->isEmpty()) {
             $viewedArticles = ViewedArticle::with([
@@ -26,6 +26,7 @@ class RecommendationsController extends Controller
                 }
             ])
                 ->orderBy('times_viewed', 'desc')
+                ->limit(10)
                 ->get()
                 ->map(function ($viewedArticle) {
                     return $viewedArticle->article;
