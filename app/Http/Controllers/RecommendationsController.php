@@ -6,12 +6,11 @@ use App\Models\Article;
 use App\Models\Order;
 use App\Models\ViewedArticle;
 use Illuminate\Support\Facades\Http;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class RecommendationsController extends Controller
 {
-    public function getRecommendations(Request $request)
+    public function getRecommendations()
     {
         $user_id = Auth::id();
 
@@ -35,7 +34,6 @@ class RecommendationsController extends Controller
             return response()->success($viewedArticles);
         }
 
-        // Get ordered articles
         $orderedCarts = Order::where('status', '<>', 'Cancelled')
             ->whereHas('cart', function ($query) use ($user_id) {
                 $query->where('user_id', $user_id);
@@ -55,7 +53,6 @@ class RecommendationsController extends Controller
             'ordered' => $orderedMetadata,
         ];
 
-        // Send a POST request to your Python Flask API
         $response = Http::post('http://127.0.0.1:5000/recommend', $payload);
         if ($response->failed()) {
             return response()->error('Could not get recommendations!');
@@ -63,7 +60,6 @@ class RecommendationsController extends Controller
 
         $recommendations_ids = json_decode($response->getBody()->getContents(), true);
 
-        // Get the articles based on the IDs from the articles table
         $recommendations = Article::whereIn('id', $recommendations_ids)->get();
 
         return response()->success($recommendations);

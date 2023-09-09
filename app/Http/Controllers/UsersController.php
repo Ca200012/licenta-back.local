@@ -16,14 +16,14 @@ class UsersController extends Controller
 {
     public function __construct()
     {
-        //nu poate intra in functii decat daca exista un token
+        // nu poate intra in functii decat daca exista un token
         $this->middleware('auth:api', ['except' => ['sendMessageReceivedEmail']]);
     }
 
     public function getUserData()
     {
         $id = Auth::id();
-        // preia user-ul care are cheia primara egala cu $id
+
         $user = User::find($id);
         return response()->success($user);
     }
@@ -33,7 +33,7 @@ class UsersController extends Controller
         $data = $request->validated();
 
         $id = Auth::id();
-        // preia user-ul care are cheia primara egala cu $id
+
         $user = User::find($id);
         if (!$user) {
             return response()->error("An error has occured!");
@@ -50,7 +50,7 @@ class UsersController extends Controller
             Mail::to($request->email)->send(new MessageReceived());
             return response()->success("Your email has been sent!");
         } catch (\Exception $e) {
-            // Log the exception message
+
             return response()->error("Failed to send the email");
         }
     }

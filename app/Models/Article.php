@@ -16,10 +16,10 @@ class Article extends Model
 
     protected $table = 'articles';
 
-    protected $primaryKey = 'id'; // auto increment
+    protected $primaryKey = 'id';
 
     protected $fillable = [
-        'article_id', // cel real
+        'article_id',
         'price',
         'discounted_price',
         'article_number',

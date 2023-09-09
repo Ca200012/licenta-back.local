@@ -11,14 +11,12 @@ use Illuminate\Support\Facades\DB;
 
 use App\Mail\OrderConfirmation;
 use App\Models\Address;
-use App\Models\Cart;
 use Illuminate\Support\Facades\Mail;
 
 class OrdersController extends Controller
 {
     public function addOrder(Request $request)
     {
-        // Start a database transaction
         DB::beginTransaction();
 
         try {
@@ -37,7 +35,6 @@ class OrdersController extends Controller
 
             $total_order_price = $cart->price < 300 ? $cart->price + 15.99 : $cart->price;
 
-            // Create a new Order
             $order = Order::create([
                 'order_id' => $order_id,
                 'cart_id' => $cart_id,
@@ -46,7 +43,6 @@ class OrdersController extends Controller
                 'total_order_price' => $total_order_price,
             ]);
 
-            // Update isActive field in Cart to 0
             $cart->is_active = 0;
             $cart->save();
 
@@ -56,21 +52,18 @@ class OrdersController extends Controller
                 $size = $cartItem->size;
                 $quantity = $cartItem->quantity;
 
-                // Assuming your Article model has fields like size_S_availability, size_M_availability etc.
                 $sizeField = 'size_' . strtoupper($size) . '_availability';
 
                 $article->$sizeField -= $quantity;
                 $article->save();
             }
 
-            // Commit the transaction
             DB::commit();
 
             Mail::to($user->email)->send(new OrderConfirmation($order));
 
             return response()->success("Order successfully created");
         } catch (\Exception $e) {
-            // Rollback the transaction in case of errors
             DB::rollback();
 
             return response()->error(['message' => 'Order creation failed: ' . $e->getMessage()], 400);
@@ -80,21 +73,22 @@ class OrdersController extends Controller
     public function getOrders()
     {
         $user = Auth::user();
-        $cartIds = $user->cart->where('is_active', 0)->pluck('cart_id')->toArray();  // Get all cart_ids related to the user
+        // Get all cart_ids related to the user
+        $cartIds = $user->cart->where('is_active', 0)->pluck('cart_id')->toArray();
 
         $orders = Order::with([
             'cart' => function ($query) {
-                $query->select(['cart_id', 'price']); // Only select the fields you need from Cart
+                $query->select(['cart_id', 'price']);
             },
             'cart.items' => function ($query) {
-                $query->select(['cart_id', 'article_id']); // Only select the fields you need from CartItem
+                $query->select(['cart_id', 'article_id']);
             },
             'cart.items.article' => function ($query) {
-                $query->select(['id', 'default_image']); // Only select the fields you need from Article
+                $query->select(['id', 'default_image']);
             }
         ])
             ->whereIn('cart_id', $cartIds)
-            ->select(['order_id', 'cart_id', 'status', 'total_order_price', 'created_at']) // Only select the fields you need from Order
+            ->select(['order_id', 'cart_id', 'status', 'total_order_price', 'created_at'])
             ->orderBy('created_at', 'desc')
             ->get();
 

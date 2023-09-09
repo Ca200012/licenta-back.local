@@ -14,7 +14,7 @@ use PHPOpenSourceSaver\JWTAuth\Exceptions\JWTException;
 
 class AuthController extends Controller
 {
-    // bypass the middleware for login and register methods - the user is not logged-in yet
+    // Bypass the middleware for login and register methods - the user is not logged-in yet
     public function __construct()
     {
         $this->middleware('auth:api', ['except' => ['login', 'register']]);
@@ -44,11 +44,9 @@ class AuthController extends Controller
 
     public function register(RegisterRequest $request)
     {
-        //luam datele din request in variabila $data
-        //return response()->error($request->all());
+
         $data = $request->validated();
 
-        //cream un obiect de tip user care primeste datele din $data si va fi trimis in front
         $user = User::create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
@@ -57,11 +55,9 @@ class AuthController extends Controller
             'date_of_birth' => isset($data['date_of_birth']) ? $data['date_of_birth'] : null,
             'password' => Hash::make($data['password']),
         ]);
-        //cream un obiect token care va fi trimis in front
+
         $token = Auth::login($user);
 
-        //returnam vectorul response care contine user si token
-        //acesta va deveni "data" in front(in signup axiosClient.post)
         return response()->success([
             'message' => 'User created successfully',
             'user' => $user,
@@ -74,10 +70,10 @@ class AuthController extends Controller
 
     public function logout()
     {
-        //sterge sesiunea
+
         Auth::logout();
         return response()->success(
-            'Ati fost deconectat cu success'
+            'Logged out successfully!'
         );
     }
 

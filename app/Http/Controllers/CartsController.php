@@ -11,7 +11,6 @@ use Illuminate\Http\Request;
 
 class CartsController extends Controller
 {
-    // Verificare articol -> daca exista
     public function addToCart(Request $request)
     {
         $sizeColumnName = 'size_' . strtoupper($request->size) . '_availability';

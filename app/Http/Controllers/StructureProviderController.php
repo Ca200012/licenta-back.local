@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 
 class StructureProviderController extends Controller
 {
-
     public function getCategories($gender_id)
     {
         if (!$gender_id) {

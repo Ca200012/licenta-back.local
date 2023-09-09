@@ -11,10 +11,10 @@ class ArticleType extends Model
 
     protected $table = 'articletypes';
 
-    protected $primaryKey = 'id'; // auto increment
+    protected $primaryKey = 'id';
 
     protected $fillable = [
-        'articletype_id', // cel real
+        'articletype_id',
         'name',
         'category_id',
         'subcategory_id',
